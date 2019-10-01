@@ -10,7 +10,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        ZStack {
+            Color("ColorBAckground")
+                .edgesIgnoringSafeArea(.vertical)
+            VStack(spacing: 20) {
+                Text("Color")
+                    .font(.largeTitle)
+                Text("Using As Background")
+                    .font(.title)
+                    .foregroundColor(.gray)
+                Divider()
+                Text("With a ZStack, you can set a COlor view as the background color.")
+                    .padding()
+                
+                Text("(Background in Dark Mode)")
+                    .padding(.top, 150)
+            }
+        }
     }
 }
 
